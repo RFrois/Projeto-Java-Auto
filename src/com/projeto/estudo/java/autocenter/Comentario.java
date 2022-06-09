@@ -30,6 +30,6 @@ public class Comentario {
 		System.out.println();
 		 
 		teclado.close();
-		System.out.println("idade: " + idade +" " + "nome: " + nome + "sobrenome: "+ sobrenome);
+		System.out.println("idade: " + idade + " " + "nome: " + nome + "sobrenome: "+ sobrenome);
 	}
 }

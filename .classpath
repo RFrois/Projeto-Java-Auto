@@ -8,5 +8,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/rafae/Downloads/sqljdbc_10.2/ptb/mssql-jdbc-10.2.0.jre17.jar"/>
 	<classpathentry kind="lib" path="libs/mysql-connector-java-8.0.28.jar"/>
+	<classpathentry kind="lib" path="libs/mssql-jdbc-10.2.1.jre17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

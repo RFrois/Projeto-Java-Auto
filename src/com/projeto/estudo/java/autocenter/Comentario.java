@@ -19,7 +19,6 @@ public class Comentario {
 		System.out.println("Qual a sua idade?");
 		int idade = teclado.nextInt();
 		teclado.nextLine();
-		System.out.println();
 		
 		System.out.println("Qual o seu nome?");		
 		String nome = teclado.nextLine();
@@ -30,6 +29,6 @@ public class Comentario {
 		System.out.println();
 		 
 		teclado.close();
-		System.out.println("idade: " + idade + " " + "nome: " + nome + "sobrenome: "+ sobrenome);
+		System.out.println("idade: " + idade + " " + "nome: " + nome +" "+ "sobrenome: "+ sobrenome);
 	}
 }

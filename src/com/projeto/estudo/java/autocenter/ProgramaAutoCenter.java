@@ -30,7 +30,7 @@ public class ProgramaAutoCenter {
 		try {
 			ano = sdfData.parse(dataNascimento);
 		} catch (ParseException e) {
-			System.out.println("Formato de data inválido!");
+			System.out.println("Formato de data invï¿½lido!");
 			System.exit(1);
 		} catch (Exception e) {
 			System.out.println("OCORREU UM ERRO!");
@@ -84,7 +84,7 @@ public class ProgramaAutoCenter {
 
 		CarroModelo carro = new CarroModelo();
 
-//			criação de lista  direto no metodo main com a classe Pacas 		
+//			criaï¿½ï¿½o de lista  direto no metodo main com a classe Pacas 		
 		ArrayList<Pecas> listaPecasPrint = new ArrayList<>();
 
 //			for para adicionar pecas 
@@ -92,17 +92,17 @@ public class ProgramaAutoCenter {
 
 		while (!escolha.equalsIgnoreCase("8")) {
 			System.out.println(
-					"Digite: \n1 cadastro de peça \n2 cadastro de cliente \n3 Endereço \n4 Contato"
-					+ "\n5 Carro \n6 serviço \n7 Visualizar \n8 Sair");
+					"Digite: \n1 cadastro de peÃ§a \n2 cadastro de cliente \n3 Endereï¿½o \n4 Contato"
+					+ "\n5 Carro \n6 serviÃ§o \n7 Visualizar \n8 Sair");
 
 			escolha = entrada.nextLine();
 
-			if ("1".equalsIgnoreCase(escolha)) { // cadastro de peças
+			if ("1".equalsIgnoreCase(escolha)) { // cadastro de peï¿½as
 
 				// while ("S".equalsIgnoreCase(novaPeca)) {
 				Pecas peca1 = new Pecas();
 
-				System.out.println("digite nova peça: ");
+				System.out.println("digite nova peÃ§a: ");
 				peca1.setPeca(entrada.nextLine());
 
 				System.out.println("digite o valor: ");
@@ -112,7 +112,7 @@ public class ProgramaAutoCenter {
 				peca1.setIdPeca(numeroId++);
 				listaPecasPrint.add(peca1);
 
-//					System.out.println("Nova Peça: S/N ");
+//					System.out.println("Nova Peï¿½a: S/N ");
 //					novaPeca = entrada.nextLine();
 //				}
 			} else if ("2".equalsIgnoreCase(escolha)) { // cadastro de cliente
@@ -129,15 +129,15 @@ public class ProgramaAutoCenter {
 				System.out.println("CPF: ");
 				cliente.setCpf(entrada.nextLine());
 
-			} else if ("3".equalsIgnoreCase(escolha)) { // Endereço
+			} else if ("3".equalsIgnoreCase(escolha)) { // Endereï¿½o
 
-				System.out.println("Tipo de Endereço: ");
+				System.out.println("Tipo de EndereÃ§o: ");
 				endereco.setTipoEndereco(entrada.nextLine());
 
 				System.out.println("Logradouro: ");
 				endereco.setLogradouro(entrada.nextLine());
 
-				System.out.println("Número: ");
+				System.out.println("NÃºmero: ");
 				endereco.setNumero(entrada.nextLine());
 
 				System.out.println("Complemento: ");
@@ -163,7 +163,7 @@ public class ProgramaAutoCenter {
 
 			} else if ("5".equalsIgnoreCase(escolha)) { // Carro
 
-				System.out.println("Tipo de Veículo: ");
+				System.out.println("Tipo de VeÃ­culo: ");
 				carro.setTipo(entrada.nextLine());
 
 				System.out.println("Marca: ");
@@ -178,25 +178,25 @@ public class ProgramaAutoCenter {
 				System.out.println("Placa: ");
 				carro.setPlaca(entrada.nextLine());
 
-			} else if ("6".equalsIgnoreCase(escolha)) { // serviço
+			} else if ("6".equalsIgnoreCase(escolha)) { // serviï¿½o
 
-				System.out.println("Tipo de Serviço: ");
+				System.out.println("Tipo de ServiÃ§o: ");
 				servico.setTipo(entrada.nextLine());
 
-				System.out.println("Foi utilizado Peça?:(S/N) ");
+				System.out.println("Foi utilizado PeÃ§a?:(S/N) ");
 				inserirPeca = entrada.nextLine();
 
-				while ("S".equalsIgnoreCase(inserirPeca)) { // sempre que comparar um valor fixo em uma vareável colocar
+				while ("S".equalsIgnoreCase(inserirPeca)) { // sempre que comparar um valor fixo em uma vareï¿½vel colocar
 															// o valor
 															// fixo a esquerda
-					Pecas peca = new Pecas(); // Instânciar o objeto, utilizando a classe Pecas para receber as
-												// informações de peca
+					Pecas peca = new Pecas(); // Instï¿½nciar o objeto, utilizando a classe Pecas para receber as
+												// informaï¿½ï¿½es de peca
 
 					if (listaPecasPrint == null || listaPecasPrint.isEmpty()) {
-						System.out.println("Não tem peça cadastrada. ");
+						System.out.println("Nï¿½o tem peï¿½a cadastrada. ");
 						inserirPeca = "N";
 					} else {
-						for (Pecas ss : listaPecasPrint) { // for para printar nome, valor e codigo da peça
+						for (Pecas ss : listaPecasPrint) { // for para printar nome, valor e codigo da peï¿½a
 
 							System.out.println(ss.getIdPeca() + " " + ss.getPeca() + " " + ss.getValorUnitario());
 						}
@@ -222,20 +222,20 @@ public class ProgramaAutoCenter {
 
 //						servico.getPecas().add(peca); // populando a lista Pecas na classe servico(OrdemServico)
 
-						System.out.println("Deseja mais Peças?:(S/N) ");
+						System.out.println("Deseja mais Peï¿½as?:(S/N) ");
 						inserirPeca = entrada.nextLine();
 
-						System.out.println("serviço executado: ");
+						System.out.println("serviï¿½o executado: ");
 						servico.setServico(entrada.nextLine());
 
-						System.out.println("Valor de mão de obra: ");
+						System.out.println("Valor de mï¿½o de obra: ");
 						servico.setValorServico(entrada.nextDouble());
 						entrada.nextLine();
 
-						servico.setValorTotal(servico.getValorTotal() + servico.getValorServico()); // calculo de peças,
+						servico.setValorTotal(servico.getValorTotal() + servico.getValorServico()); // calculo de peï¿½as,
 																									// e
-																									// valor de serviço
-						System.out.println("Serviço executado: " + servico.getServico() + "\nValor toral: " + servico.getValorTotal());
+																									// valor de serviï¿½o
+						System.out.println("Serviï¿½o executado: " + servico.getServico() + "\nValor toral: " + servico.getValorTotal());
 //					System.out.println("Valor Total: ");
 //					servico.setValorTotal(entrada.nextDouble());
 					}
@@ -262,48 +262,48 @@ public class ProgramaAutoCenter {
 				// (Objeto nomeFor : instancia.objeto()){}
 				for (Contato c1 : cliente.getContatos()) { // for para objetos
 					System.out.println("Celular: ".concat(c1.getCelular() == null ? " " : c1.getCelular())); // if
-																												// ternário/Operador
-																												// ternário
+																												// ternï¿½rio/Operador
+																												// ternï¿½rio
 					System.out.println("Celular2: " + c1.getCelular2());
 					System.out.println("E-mail: " + c1.getEmail());
 					System.out.println("Contato: " + c1.getContato());
 				}
 
 				for (Endereco e1 : cliente.getEndereco()) { // for (Classe do objeto, var do for : classe e objeto de da
-															// instancia onde está indo o get
-					System.out.println("Tipo de endereço: ".concat(e1.getTipoEndereco() == null ? " " : e1.getTipoEndereco()));
+															// instancia onde estï¿½ indo o get
+					System.out.println("Tipo de endereï¿½o: ".concat(e1.getTipoEndereco() == null ? " " : e1.getTipoEndereco()));
 					System.out.println("Logradouro: ".concat(e1.getLogradouro() == null ? " " : e1.getLogradouro()));
-					System.out.println("Número: ".concat(e1.getNumero() == null ? " " : e1.getNumero()));
+					System.out.println("Nï¿½mero: ".concat(e1.getNumero() == null ? " " : e1.getNumero()));
 					System.out.println("Complemento: ".concat(e1.getComplemento() == null ? " " : e1.getComplemento()));
-					System.out.println("CEP: ".concat(e1.getCep() == null ? " " : e1.getCep())); // Operador ternário (condição
+					System.out.println("CEP: ".concat(e1.getCep() == null ? " " : e1.getCep())); // Operador ternï¿½rio (condiï¿½ï¿½o
 																									// ? else:)
 				}
 
 				for (CarroModelo car1 : cliente.getCarro()) {
 					System.out
-							.println("Tipo de veículo: ".concat(nomeMaiusculo(car1.getTipo() == null ? " " : car1.getTipo())));
+							.println("Tipo de veï¿½culo: ".concat(nomeMaiusculo(car1.getTipo() == null ? " " : car1.getTipo())));
 					System.out.println("Marca: ".concat(nomeMaiusculo(car1.getMarca() == null ? " " : car1.getMarca())));
 					System.out.println("Modelo: ".concat(nomeMaiusculo(car1.getModelo() == null ? " " : car1.getModelo())));
 					System.out.println("Ano: ".concat(car1.getAno() == null ? " " : car1.getAno()));
 					System.out.println("Placa: ".concat(maiusculo(car1.getPlaca() == null ? " " : car1.getPlaca())));
 				}
 
-				System.out.println("Tipo de Serviço: ".concat(servico.getTipo()));
+				System.out.println("Tipo de Serviï¿½o: ".concat(servico.getTipo()));
 				for (Pecas os1 : servico.getPecas()) {
-					System.out.println("Peça Utilizada: ".concat(os1.getPeca()));
+					System.out.println("Peï¿½a Utilizada: ".concat(os1.getPeca()));
 					System.out.println("Qantidade: " + (os1.getQuantidade()));
-					System.out.println("valor Unitário: " + (os1.getValorUnitario()));
-					System.out.println("Valor Peças: " + (os1.getValor()));
+					System.out.println("valor Unitï¿½rio: " + (os1.getValorUnitario()));
+					System.out.println("Valor Peï¿½as: " + (os1.getValor()));
 				}
-				System.out.println("serviço executado: ".concat(servico.getServico()));
-				System.out.println("Valor de mão de obra: " + (servico.getValorServico()));
+				System.out.println("serviï¿½o executado: ".concat(servico.getServico()));
+				System.out.println("Valor de mï¿½o de obra: " + (servico.getValorServico()));
 				System.out.println("Valor Toal: " + servico.getValorTotal());
 
 			}else if ("8".equalsIgnoreCase(escolha)) {
 				System.out.println("Saindo");
 				
 			}else {
-				System.out.println("Opção inválida");
+				System.out.println("OpÃ§Ã£o invÃ¡lida");
 			}
 		}
 		System.out.println("Obrigado");

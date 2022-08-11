@@ -92,7 +92,7 @@ public class ProgramaAutoCenter {
 
 		while (!escolha.equalsIgnoreCase("8")) {
 			System.out.println(
-					"Digite: \n1 cadastro de peça \n2 cadastro de cliente \n3 Endere�o \n4 Contato"
+					"Digite: \n1 primeira cadastro de peça \n2 cadastro de cliente \n3 Endere�o \n4 Contato"
 					+ "\n5 Carro \n6 serviço \n7 Visualizar \n8 Sair");
 
 			escolha = entrada.nextLine();
